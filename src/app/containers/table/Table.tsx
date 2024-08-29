@@ -9,7 +9,7 @@ const Table: React.FC<{ darkTheme: boolean; toggleDarkTheme: () => void }> = ({ 
   const [searchQuery, setSearchQuery] = useState('');
 
   return (
-    <div className="dark:bg-dark-blue">
+    <div className="dark:bg-dark-blue min-h-screen">
       <Header
         itemsPerPage={itemsPerPage}
         setItemsPerPage={setItemsPerPage}

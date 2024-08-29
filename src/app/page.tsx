@@ -13,11 +13,8 @@ export default function Home() {
   const theme = darkTheme ? 'dark' : '';
 
   return (
-    <div className={theme}>
-      <Table
-        darkTheme={darkTheme}
-        toggleDarkTheme={toggleDarkTheme}
-      />
+    <div className={`${theme} min-h-screen bg-gray-100 dark:bg-[#1D1E42]`}>
+      <Table darkTheme={darkTheme} toggleDarkTheme={toggleDarkTheme}/>
     </div>
   );
 }
