@@ -12,7 +12,6 @@ const config: Config = {
         'purple': '#624DE3',
         'gray': '#E0E0E0',
         'gray-input': '#9E9E9E',
-        'purple-edit': '#624DE3',
         'red-delete': '#A30D11',
         'dark-blue': '#1D1E42',
         'selector-dark-blue': '#141432',

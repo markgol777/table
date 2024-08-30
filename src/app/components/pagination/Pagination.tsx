@@ -40,10 +40,10 @@ const Pagination: React.FC<PaginationProps> = ({
             <li key={number}>
               <Button
                 onClick={() => handleClick(number)}
-                className={`relative block px-3 py-1.5 text-sm rounded ${
+                className={`relative block px-3 py-1.5 mx-3 text-sm rounded ${
                   currentPage === number
                     ? "text-white bg-purple font-semibold"
-                    : "text-black dark:text-white bg-gray-200 hover:bg-gray-300"
+                    : "text-black dark:text-white bg-gray dark:bg-selector-dark-blue hover:bg-gray-300"
                 }`}
                 aria-current={currentPage === number ? "page" : undefined}
               >

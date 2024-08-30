@@ -27,17 +27,17 @@ const UserItem: React.FC<UserItemProps> = ({
       <td className="whitespace-nowrap px-6 py-4">{date}</td>
       <td className="whitespace-nowrap px-6 py-4">${amount.toFixed(2)}</td>
       <td className="whitespace-nowrap px-6 py-4">{paymentMode}</td>
-      <td className="whitespace-nowrap px-6 py-4">{status}</td>
+      <td className={`whitespace-nowrap px-6 py-4 ${status}`}><div className="status-container">{status}</div></td>
       <td className="whitespace-nowrap px-6 py-4 flex gap-2">
         <Button
           onClick={() => alert(`Edit ${trackingId}`)}
-          className="text-blue-500 hover:text-blue-700 h-8"
+          className="text-blue-500 h-6 text-purple"
         >
           <PencilSquareIcon className="h-5 w-5" aria-hidden="true" />
         </Button>
         <Button
           onClick={() => onDelete(trackingId)}
-          className="text-red-500 hover:text-red-700 h-8"
+          className="text-red-delete h-6"
         >
           <TrashIcon className="h-5 w-5" aria-hidden="true" />
         </Button>
