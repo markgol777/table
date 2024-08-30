@@ -16,7 +16,6 @@ const UserTable: React.FC<UserTableProps> = ({ itemsPerPage, searchQuery }) => {
   );
 
   const totalItems = filteredData.length;
-  const totalPages = Math.ceil(totalItems / itemsPerPage);
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
