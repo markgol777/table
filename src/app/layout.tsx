@@ -16,7 +16,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      {/* suppressHydrationWarning={true} is used for next not to conflict with different extensions */}
+      <body suppressHydrationWarning={true} className={montserrat.className}>{children}</body>
     </html>
   );
 }

@@ -4,6 +4,7 @@ import React from 'react';
 import { PencilSquareIcon, TrashIcon } from '@heroicons/react/20/solid';
 import { Button } from '@headlessui/react';
 import { UserItemProps } from '~/app/utils/interface/table';
+import Image from 'next/image';
 
 const UserItem: React.FC<UserItemProps> = ({
   trackingId,
@@ -20,14 +21,17 @@ const UserItem: React.FC<UserItemProps> = ({
     <tr className="odd:bg-odd-product-light-purple dark:odd:bg-odd-product-dark-blue even:bg-transparent dark:text-white">
       <td className="whitespace-nowrap px-6 py-4 font-medium w-[10%]">#{trackingId}</td>
       <td className="whitespace-nowrap flex items-center px-6 py-4 w-[20%]">
-        <img src={productImage} alt={productName} className="w-8 h-8 object-cover rounded mr-2 min-w-[32px] min-h-[32px]" />
+        {/* className="w-8 h-8 object-cover rounded mr-2" */}
+        <Image src={productImage} alt={productName} height={32} width={32} />
         {productName.length > 15 ? productName.slice(0, 15) + '...' : productName}
       </td>
       <td className="whitespace-nowrap px-6 py-4 w-[15%]">{customer}</td>
       <td className="whitespace-nowrap px-6 py-4 w-[10%]">{date}</td>
       <td className="whitespace-nowrap px-6 py-4 w-[10%]">${amount.toFixed(2)}</td>
       <td className="whitespace-nowrap px-6 py-4 w-[15%]">{paymentMode}</td>
-      <td  className={`whitespace-nowrap px-6 py-4 w-[10%] ${status}`}><div className="status-container">{status}</div></td>
+      <td className={`whitespace-nowrap px-6 py-4 w-[10%] ${status}`}>
+        <div className="status-container">{status}</div>
+      </td>
       <td className="whitespace-nowrap px-6 py-4 flex gap-2 w-[10%]">
         <Button
           onClick={() => alert(`Edit ${trackingId}`)}
