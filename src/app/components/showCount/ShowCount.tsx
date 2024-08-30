@@ -17,7 +17,7 @@ const ShowCount: React.FC<ShowCountProps> = ({ itemsPerPage, setItemsPerPage }) 
 
       <MenuItems
         transition
-        className="absolute right-0 z-10 mt-2 w-20 origin-top-right dark:bg-selector-dark-blue dark:text-white rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+        className="absolute right-0 z-10 mt-2 w-20 origin-top-right dark:bg-selector-dark-blue dark:text-white rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0"
       >
         <div className="py-1">
           {[10, 20, 50].map(count => (
