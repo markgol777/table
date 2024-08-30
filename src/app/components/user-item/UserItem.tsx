@@ -18,17 +18,17 @@ const UserItem: React.FC<UserItemProps> = ({
 }) => {
   return (
     <tr className="odd:bg-odd-product-light-purple dark:odd:bg-odd-product-dark-blue even:bg-transparent dark:text-white">
-      <td className="whitespace-nowrap px-6 py-4 font-medium">{trackingId}</td>
-      <td className="whitespace-nowrap flex items-center px-6 py-4">
-        <img src={productImage} alt={productName} className="w-8 h-8 object-cover rounded mr-2" />
-        {productName}
+      <td className="whitespace-nowrap px-6 py-4 font-medium w-[10%]">#{trackingId}</td>
+      <td className="whitespace-nowrap flex items-center px-6 py-4 w-[20%]">
+        <img src={productImage} alt={productName} className="w-8 h-8 object-cover rounded mr-2 min-w-[32px] min-h-[32px]" />
+        {productName.length > 15 ? productName.slice(0, 15) + '...' : productName}
       </td>
-      <td className="whitespace-nowrap px-6 py-4">{customer}</td>
-      <td className="whitespace-nowrap px-6 py-4">{date}</td>
-      <td className="whitespace-nowrap px-6 py-4">${amount.toFixed(2)}</td>
-      <td className="whitespace-nowrap px-6 py-4">{paymentMode}</td>
-      <td className={`whitespace-nowrap px-6 py-4 ${status}`}><div className="status-container">{status}</div></td>
-      <td className="whitespace-nowrap px-6 py-4 flex gap-2">
+      <td className="whitespace-nowrap px-6 py-4 w-[15%]">{customer}</td>
+      <td className="whitespace-nowrap px-6 py-4 w-[10%]">{date}</td>
+      <td className="whitespace-nowrap px-6 py-4 w-[10%]">${amount.toFixed(2)}</td>
+      <td className="whitespace-nowrap px-6 py-4 w-[15%]">{paymentMode}</td>
+      <td  className={`whitespace-nowrap px-6 py-4 w-[10%] ${status}`}><div className="status-container">{status}</div></td>
+      <td className="whitespace-nowrap px-6 py-4 flex gap-2 w-[10%]">
         <Button
           onClick={() => alert(`Edit ${trackingId}`)}
           className="text-blue-500 h-6 text-purple"
@@ -37,7 +37,7 @@ const UserItem: React.FC<UserItemProps> = ({
         </Button>
         <Button
           onClick={() => onDelete(trackingId)}
-          className="text-red-delete h-6"
+          className="text-red-delete hover:text-red-700 h-6"
         >
           <TrashIcon className="h-5 w-5" aria-hidden="true" />
         </Button>

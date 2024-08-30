@@ -53,18 +53,18 @@ const UserTable: React.FC<UserTableProps> = ({ itemsPerPage, searchQuery }) => {
   }, [searchQuery]);
 
   return (
-    <div className="overflow-hidden">
+    <div>
       <table className="min-w-full text-left text-sm font-light">
         <thead>
           <tr className="font-medium dark:text-white">
-            <th className="px-6 py-4">Tracking ID</th>
-            <th className="px-6 py-4">Product</th>
-            <th className="px-6 py-4">Customer</th>
-            <th className="px-6 py-4">Date</th>
-            <th className="px-6 py-4">Amount</th>
-            <th className="px-6 py-4">Payment Mode</th>
-            <th className="px-6 py-4">Status</th>
-            <th className="px-6 py-4">Actions</th>
+            <th className="px-6 py-4 w-[10%]">Tracking ID</th>
+            <th className="px-6 py-4 w-[20%]">Product</th>
+            <th className="px-6 py-4 w-[15%]">Customer</th>
+            <th className="px-6 py-4 w-[10%]">Date</th>
+            <th className="px-6 py-4 w-[10%]">Amount</th>
+            <th className="px-6 py-4 w-[15%]">Payment Mode</th>
+            <th className="px-6 py-4 w-[10%]">Status</th>
+            <th className="px-6 py-4 w-[10%]">Actions</th>
           </tr>
         </thead>
         <tbody>

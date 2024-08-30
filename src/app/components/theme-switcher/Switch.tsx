@@ -7,7 +7,7 @@ import { Button } from '@headlessui/react';
 const Switch: React.FC<DarkModeSwitchProps> = ({ darkTheme, toggleDarkTheme }) => {
   return (
     <Button
-      className="mr-2"
+      className="mr-4"
       onClick={toggleDarkTheme}
       aria-label="Toggle Dark Mode"
     >
