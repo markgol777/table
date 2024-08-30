@@ -45,3 +45,8 @@ export interface DarkModeSwitchProps {
   darkTheme: boolean;
   toggleDarkTheme: () => void;
 }
+
+export interface Table {
+  darkTheme: boolean;
+  toggleDarkTheme: () => void;
+}

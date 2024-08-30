@@ -3,8 +3,9 @@
 import React, { useState } from 'react';
 import Header from '~/app/containers/header/Header';
 import UserTable from '~/app/components/user-table/UserTable';
+import { Table } from '~/app/utils/interface/table'
 
-const Table: React.FC<{ darkTheme: boolean; toggleDarkTheme: () => void }> = ({ darkTheme, toggleDarkTheme }) => {
+const Table: React.FC<Table> = ({ darkTheme, toggleDarkTheme }) => {
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [searchQuery, setSearchQuery] = useState('');
 
