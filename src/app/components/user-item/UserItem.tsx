@@ -27,7 +27,7 @@ const UserItem: React.FC<UserItemProps> = ({
       <td className="whitespace-nowrap px-6 py-4 w-[10%]">{date}</td>
       <td className="whitespace-nowrap px-6 py-4 w-[10%]">${amount.toFixed(2)}</td>
       <td className="whitespace-nowrap px-6 py-4 w-[15%]">{paymentMode}</td>
-      <td  className={`whitespace-nowrap px-6 py-4 w-[10%] ${status}`}><div className="status-container">{status}</div></td>
+      <td  className={`whitespace-nowrap px-6 py-4 w-[10%] ${status.toLocaleLowerCase()}`}><div className="status-container">{status}</div></td>
       <td className="whitespace-nowrap px-6 py-4 flex gap-2 w-[10%]">
         <Button
           onClick={() => alert(`Edit ${trackingId}`)}
